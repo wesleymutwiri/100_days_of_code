@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 18px auto;
+}
+
+nav {
+    width: 100%; 
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.menu-icon {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.middle-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 20px; 
+}
+
+.logo {
+    width: 430px;
+    height: 58px;
+    margin: 6px auto;
+}
+
+.date, .right-end {
+    font-size: 14px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style-type: none;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.nav-item a {
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    "highlights highlights highlights"
+    "header header sidebar"
+    "news news sidebar"
+    "other-news other-news other-news"
+    /*"similar-news similar-news similar news"
+    "features features features"
+    "news-selections  news-selections news-selections"*/
+    "footer footer footer";  
+    grid-template-columns: 1fr 200px 200px;
+    grid-template-rows: repeat(1fr);
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.highlights {
+    grid-area: highlights;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+}
+
+.float-right{
+    grid-area: image;
+}
+
+.content {
+   display: grid;
+   grid-template-areas: "text text image";
+   grid-template-columns: 1fr 300px;
+   grid-template-columns: 1fr;
+}
+
+.text  {
+    grid-area: text;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    min-height: 100vh;
+    border-left: 2px solid #000;
+    padding: 4px;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.news {
+    grid-area: news;
+}
+
+.other-news {
+    grid-area: other-news;
+}
+
+.similar-news {
+    grid-area: similar-news;
+}
+
+.features {
+    grid-area: features;
+}
+
+.news-selections {
+    grid-area: news-selections;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.darker {
+    font-weight: bold;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: column;
+}
