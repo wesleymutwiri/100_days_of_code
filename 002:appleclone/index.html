@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apple</title>
     <link rel="stylesheet" href="css/style.css" />
+
   </head>
   <body>
     <nav class="navbar">
@@ -26,14 +27,20 @@
               <circle cx="12" cy="12" r="3"></circle></svg
           ></a>
         </li>
-        <li><a href="#">Mac</a></li>
-        <li><a href="#">iPad</a></li>
-        <li><a href="#">iPhone</a></li>
-        <li><a href="#">Watch</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Support</a></li>
-        <li>
+        <li class="toggle" id="toggle">
+            <a href="#">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </a>
+
+        </li>
+        <li class="item"><a href="#">Mac</a></li>
+        <li class="item"><a href="#">iPad</a></li>
+        <li class="item"><a href="#">iPhone</a></li>
+        <li class="item"><a href="#">Watch</a></li>
+        <li class="item"><a href="#">TV</a></li>
+        <li class="item"><a href="#">Music</a></li>
+        <li class="item"><a href="#">Support</a></li>
+        <li class="item">
           <a href="#">
             <svg
               viewBox="0 0 24 24"
@@ -52,7 +59,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="shop">
             <svg
               viewBox="0 0 24 24"
               width="24"
@@ -290,6 +297,28 @@
           <a href="#">Contact Apple</a>
         </div>
       </div>
+      <div class="copyright">
+        <p id="copyright-text">
+          More ways to shop.
+          <a href="#">
+            Find an Apple Store
+          </a>
+          or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.
+        </p>
+        <p id="info">
+            <div class="flex-row">
+            Copyright &#169; 2020 Apple Inc. All rights reserved.
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Sales and Refunds</a>
+            <a href="#">Legal</a>
+            <a href="#">Site Map</a>
+
+            <a href="#" class="last-element">United States</a>
+        </div>
+          </p>
+      </div>
     </footer>
+        <script src="app.js"></script>
   </body>
 </html>
