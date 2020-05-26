@@ -77,7 +77,7 @@ nav {
 }
 
 .date, .right-end {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .categories {
@@ -220,3 +220,28 @@ main {
      color: black;
      text-decoration: none;
  }
+
+@media screen and (max-width: 955px) {
+    .category-nav {
+        display: none;
+    }
+
+    main {
+        display: block;
+    }
+    .content {
+        display: block;
+        padding: 4px;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    /* .highlights {
+        display: block;
+    } */
+    .row {
+        display: block;
+    }
+}
