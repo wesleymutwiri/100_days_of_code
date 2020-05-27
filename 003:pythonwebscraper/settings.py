@@ -1,6 +1,5 @@
 BOT_NAME = 'livingsocial'
 SPIDER_MODULES = ['scrapper_app.spiders']
-ITEM_PIPELINES = ['scrapper_app.pipelines.LivingSocialPipeline']
 
 DATABASE = {
     'drivername': 'postgres',
@@ -11,3 +10,4 @@ DATABASE = {
     "database": 'scrape'
 }
 
+ITEM_PIPELINES = ['scrapper_app.pipelines.LivingSocialPipeline']

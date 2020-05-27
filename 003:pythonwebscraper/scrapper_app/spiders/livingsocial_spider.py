@@ -3,16 +3,16 @@ from scrapy.selector import HtmlXPathSelector
 from scrapy.contrib.loader import XPathItemLoader
 from scrapy.contrib.loader.processor import Join, MapCompose
 
+from scrapper_app.items import LivingSocialDeal
 
-from scraper_app.items import LivingSocialDeal
 
-class LivingSocialSPider(BaseSpider):
+class LivingSocialSpider(BaseSpider):
     """
-    Spider for regularly updated livingsocial.com site, San Francisco Page
+    Spider for regularly updated livingsocial.com site, San Francisco page
     """
     name = "livingsocial"
     allowed_domains = ["livingsocial.com"]
-    start_urls = ["http://www.livingsocial.com/cities/15-san-francisco"]
+    start_urls = ["https://www.livingsocial.com/cities/15-san-francisco"]
 
     deals_list_xpath = '//li[@dealid]'
     item_fields = {
@@ -23,27 +23,26 @@ class LivingSocialSPider(BaseSpider):
         'price': './/a/div[@class="deal-prices"]/div[@class="deal-price"]/text()',
         'end_date': './/span[@itemscope]/meta[@itemprop="availabilityEnds"]/@content'
     }
+
     def parse(self, response):
         """
-        Default callback use by Scrapy to process downloaded responses
-
+        Default callback used by Scrapy to process downloaded responses
         Testing contracts:
         @url http://www.livingsocial.com/cities/15-san-francisco
         @returns items 1
         @scrapes title link
-
         """
         selector = HtmlXPathSelector(response)
 
-        # iterates over deals
-        for deal in selector.select(self.deals_list_xpath):
+        # iterate over deals
+        for deal in selector.xpath(self.deals_list_xpath):
             loader = XPathItemLoader(LivingSocialDeal(), selector=deal)
 
-            #define processors
+            # define processors
             loader.default_input_processor = MapCompose(unicode.strip)
             loader.default_output_processor = Join()
 
-            # iterates over fields and add xpaths to the loader
+            # iterate over fields and add xpaths to the loader
             for field, xpath in self.item_fields.iteritems():
                 loader.add_xpath(field, xpath)
             yield loader.load_item()

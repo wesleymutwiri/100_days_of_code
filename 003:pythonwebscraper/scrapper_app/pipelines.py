@@ -28,7 +28,9 @@ class LivingSocialPipeline(object):
 
         except:
             session.rollback()
+            print("Error adding to database")
             raise
         finally:
             session.close()
+        
         return item 
