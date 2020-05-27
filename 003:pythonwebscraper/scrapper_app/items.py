@@ -6,7 +6,7 @@ class LivingSocialDeal(Item):
     """
     title = Field()
     link = Field()
-    location = FIeld()
+    location = Field()
     original_price = Field()
     price = Field()
     end_date = Field()
