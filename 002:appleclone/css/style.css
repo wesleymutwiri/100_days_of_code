@@ -12,14 +12,13 @@ body {
 nav {
   background: #141414;
   padding: 5px 20px;
-  min-width: 1024px;
   position: fixed;
   width: 100%;
   overflow: hidden;
   top: 0;
 }
 
-nav ul {
+.items {
   list-style-type: none;
   width: auto;
   display: flex;
@@ -30,28 +29,21 @@ nav ul {
   max-width: 980px;
 }
 
-nav ul a {
+.items a {
   color: #f5f5f7;
   text-decoration: none;
   font-size: 14px;
 }
 
-nav ul a:hover {
+.items a:hover {
   text-decoration: underline;
   opacity: 1;
-}
-
-.icon {
-  background-image: url("../../en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__cxwwnrj0urau_large.svg");
-  background-size: 16px 44px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 16px;
 }
 
 .toggle {
   display: none;
 }
+
 .announcement {
   text-align: center;
   background: #0071e3;
@@ -229,52 +221,33 @@ footer {
 }
 
 @media screen and (max-width: 1100px) {
-  nav {
-    min-width: 0;
-  }
-
-  .items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .icon {
-    order: 1;
-  }
-  .toggle {
-    display: inline-block;
-    order: 0;
-  }
-
   .item {
     display: none;
-    width: 100%;
-    text-align: center;
-    order: 3;
-    flex: 1;
+  }
+  .toggle {
+    display: initial;
+  }
+  .items,
+  nav {
     flex-direction: column;
-    border-bottom: #f5f5f7 1px solid;
-    height: 40px;
-    position: fixed;
-    z-index: 1;
-    background: #131313;
-    top: 50px;
+  }
+  .active {
+    display: initial;
     width: 100%;
-  }
-
-  .shop {
-    order: 2;
-  }
-  .item.active {
-    display: block;
-    z-index: 9999;
-    top: 50px;
+    z-index: 99999;
     color: #f5f5f7;
+    background: #131313;
+    padding: 16px;
+    margin-left: auto;
   }
   .item.active a {
     color: #f5f5f7;
+    background: #131313;
+    text-align: center;
+    position: fixed;
+    display: initial;
+    width: 100%;
+    padding: 16px;
   }
 }
 
