@@ -3,4 +3,5 @@
 Simple apple.com clone using only HTML and CSS to solidify UI skills
 
 ## Live site
-coming soon 
+
+[Live site](https://optimistic-golick-752286.netlify.app/)
