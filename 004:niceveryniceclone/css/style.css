@@ -90,7 +90,6 @@ header {
   padding: 5px 12px;
   color: #b7b7b7;
   background: #2b2b2b;
-  border-radius: ;
   grid-area: price;
   border-radius: 20px;
 }
@@ -114,7 +113,6 @@ header {
   grid-template-areas:
     "img smallname smallname"
     "img smalltext smalltext";
-  width: ;
 }
 
 .small-card {
@@ -164,9 +162,46 @@ header {
   margin-top: 50px;
 }
 
-.designs {
-  display: grid;
-  grid-template-areas:
-    "content content round-img"
-    "content content round-img";
+.design {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #2b2b2b;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.design-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rounded-image {
+  border-radius: 50%;
+}
+
+.design-name {
+  text-transform: uppercase;
+  padding: 10px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+footer {
+  margin-top: 30px;
+  padding: 40px 0px;
+  border-top: #2b2b2b 1px solid;
+}
+
+footer .items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.items li a {
+  color: hsla(0, 0%, 100%, 0.6);
+
+  text-decoration: none;
 }
