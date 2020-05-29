@@ -208,8 +208,21 @@ footer .items {
   text-decoration: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 740px) {
   .column.last {
     display: none;
+    /* position: absolute; */
+  }
+  .column {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 529px) {
+  .items {
+    display: none;
+  }
+  .footer {
+    padding: 0;
   }
 }
