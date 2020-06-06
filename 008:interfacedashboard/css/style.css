@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f7fb;
+  font-family: "Spartan", sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.title-text {
+  margin-right: 10px;
+}
+
+.title svg {
+  background: #edf0f9;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  background: #ffffff;
+  height: 100%;
+  min-height: 100vh;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+
+.sidebar-item {
+  padding: 16px;
+  text-align: left;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.sidebar-item svg {
+}
+
+.add-more {
+  background: #faf8fb;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.new-item {
+  display: flex;
+  align-items: center;
+  background: #dfe0f2;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  padding-left: 0;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.left-side {
+  height: 100%;
+  padding: 0;
+  vertical-align: middle;
+  background: #edf0f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.right-side {
+  padding: 5px 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.help-text {
+  text-align: center;
+  width: 150px;
+  line-height: 2;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+main {
+  margin-left: 330px;
+  height: 100%;
+  min-height: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.navbar * {
+  margin-right: 50px;
+}
+
+#search {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+}
+
+.user-image {
+  border-radius: 50%;
+  height: 30px;
+}
