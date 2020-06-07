@@ -127,3 +127,86 @@ main {
   border-radius: 50%;
   height: 30px;
 }
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.greetings {
+  padding: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+}
+
+.welcome {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.welcome-message {
+  color: #9f9dab;
+  font-weight: 700;
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+.drawing {
+  width: 600px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  background: #dfe0f2;
+}
+
+.renew-account {
+  display: flex;
+  justify-content: space-between;
+  background: #383874;
+  color: #fff;
+  border-radius: 10px;
+  /* padding: 20px; */
+  align-items: center;
+  max-width: 600px;
+  height: 80px;
+}
+
+.button-area button {
+  padding: 16px 40px;
+
+  border-radius: 8px;
+  background: #e7bdd3;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+.text-area,
+.icon-area {
+  padding: 20px;
+}
+
+.text-area {
+  flex: 0.8;
+  font-size: 0.9rem;
+}
+
+.text-area .small-text {
+  font-size: 0.6rem;
+  margin-top: 5px;
+}
+
+.icon-area {
+  flex: 0.1;
+}
+
+.button-area {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
