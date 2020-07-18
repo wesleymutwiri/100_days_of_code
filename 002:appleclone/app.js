@@ -1,7 +1,7 @@
-let menu = document.querySelectorAll(".item");
+let mainNav = document.getElementById("menu");
 
-let navbarToggle = document.getElementById("toggle");
+let navbarToggle = document.getElementById("navbar-toggle");
 
 navbarToggle.addEventListener("click", function () {
-  menu.forEach((menu) => menu.classList.toggle("active"));
+  mainNav.classList.toggle("mobile");
 });

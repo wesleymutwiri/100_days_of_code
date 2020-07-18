@@ -9,34 +9,14 @@
   </head>
   <body>
     <nav class="navbar">
-      <ul class="items">
-        <li>
-          <a href="#" class="icon"
-            ><svg
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="css-i6dzq1"
-            >
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle></svg
-          ></a>
-        </li>
-        <li class="toggle" id="toggle">
-            <a href="#">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </a>
-
-        </li>
+      <div class="inner">
+  <div class="mobile-icon" id="navbar-toggle" >
+          <a href="javascript:void(0);" class="icon">
+         </a>
+          <div class="middle-line"></div>
+        </div>
+      
+      <ul class="navbar-list" id="menu">
         <li class="item"><a href="#">Mac</a></li>
         <li class="item"><a href="#">iPad</a></li>
         <li class="item"><a href="#">iPhone</a></li>
@@ -62,7 +42,7 @@
             </svg>
           </a>
         </li>
-        <li>
+        <li class="item">
           <a href="#" class="shop">
             <svg
               viewBox="0 0 24 24"
@@ -84,6 +64,7 @@
           </a>
         </li>
       </ul>
+      </div>
     </nav>
 
     <main>
